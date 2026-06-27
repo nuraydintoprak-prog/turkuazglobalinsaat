@@ -807,28 +807,7 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 .footer-legal a:hover { color: rgba(255,255,255,.6); }
 
 /* ── WhatsApp Float ──────────────────────────── */
-.wa-float {
-  position: fixed; bottom: 28px; right: 28px; z-index: 800;
-  width: 56px; height: 56px;
-  background: #25d366; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 18px rgba(37,211,102,.4);
-  transition: transform var(--tr), box-shadow var(--tr);
-}
-.wa-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 26px rgba(37,211,102,.55);
-}
-.wa-float svg { fill: var(--white); width: 28px; height: 28px; }
-.wa-float-tip {
-  position: absolute; right: 66px;
-  background: var(--navy); color: var(--white);
-  font-size: .75rem; padding: 5px 12px;
-  border-radius: 2px; white-space: nowrap;
-  opacity: 0; pointer-events: none;
-  transition: opacity var(--tr);
-}
-.wa-float:hover .wa-float-tip { opacity: 1; }
+
 
 /* ── Product Hero (photo banner) ────────────── */
 .product-hero {
