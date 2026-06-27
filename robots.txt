@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /perde-sistemleri.html
 
 # AI crawlers
 User-agent: GPTBot
@@ -18,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://emirtente.com.tr/sitemap.xml
+Sitemap: https://turkuazglobalinsaat.com/sitemap.xml

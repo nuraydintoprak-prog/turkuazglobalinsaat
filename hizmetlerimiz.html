@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hizmetlerimiz | Turkuaz Global İnşaat İstanbul — Tadilat, Boya, Alçı, Fayans</title>
+  <meta name="description" content="İstanbul'da A'dan Z'ye inşaat ve dekorasyon: tadilat, alçı, boya, fayans, laminat, kartonpiyer, mantolama ve daha fazlası. Ücretsiz keşif: 0532 067 65 48" />
+  <link rel="canonical" href="https://turkuazglobalinsaat.com/hizmetlerimiz.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* ── Hizmetlerimiz Sayfa Stilleri ── */
+    .srv-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a3e 100%);
+      padding: 100px 0 80px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .srv-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('img/WhatsApp Image 2026-06-27 at 14.23.06 (13).jpeg') center/cover no-repeat;
+      opacity: .18;
+    }
+    .srv-hero .container { position: relative; z-index: 1; }
+    .srv-hero .section-label { color: var(--gold-lt); }
+    .srv-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.2rem); margin: 12px 0 20px; }
+    .srv-hero p { color: rgba(255,255,255,.82); font-size: 1.1rem; max-width: 600px; margin: 0 auto 36px; }
+    .srv-hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* Stats bar */
+    .stats-bar {
+      background: var(--gold);
+      padding: 28px 0;
+    }
+    .stats-bar .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 0 24px;
+      border-right: 1px solid rgba(255,255,255,.3);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1; }
+    .stat-lbl { font-size: .82rem; color: rgba(255,255,255,.88); margin-top: 4px; letter-spacing: .04em; }
+
+    /* Service sections */
+    .srv-section {
+      padding: 90px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .srv-section:last-of-type { border-bottom: none; }
+    .srv-section.bg-alt { background: var(--cream); }
+
+    .srv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .srv-grid.reverse { direction: rtl; }
+    .srv-grid.reverse > * { direction: ltr; }
+
+    .srv-img-wrap {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    }
+    .srv-img-wrap img {
+      width: 100%; height: 480px;
+      object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .srv-img-wrap:hover img { transform: scale(1.03); }
+    .srv-img-badge {
+      position: absolute; bottom: 20px; left: 20px;
+      background: var(--gold); color: #fff;
+      padding: 8px 18px; border-radius: 3px;
+      font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+
+    .srv-content .section-label { margin-bottom: 10px; display: block; }
+    .srv-content h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--navy); margin: 0 0 20px; line-height: 1.2;
+    }
+    .srv-content .divider { margin: 0 0 24px; }
+    .srv-content p {
+      font-size: .97rem; line-height: 1.9;
+      color: var(--muted); margin-bottom: 18px;
+    }
+    .srv-tags {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin: 28px 0 32px;
+    }
+    .srv-tag {
+      background: var(--gray); color: var(--navy);
+      padding: 6px 16px; border-radius: 30px;
+      font-size: .8rem; font-weight: 500;
+      border: 1px solid var(--border);
+    }
+    .srv-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--navy); color: #fff;
+      padding: 13px 28px; border-radius: 3px;
+      font-size: .88rem; font-weight: 600;
+      text-decoration: none; letter-spacing: .03em;
+      transition: background .2s, transform .2s;
+    }
+    .srv-link:hover { background: var(--gold); transform: translateX(4px); }
+    .srv-link-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold); font-size: .88rem; font-weight: 600;
+      text-decoration: none; margin-left: 20px;
+      transition: gap .2s;
+    }
+    .srv-link-ghost:hover { gap: 14px; }
+
+    /* Index section at top */
+    .srv-index {
+      padding: 60px 0 0;
+    }
+    .srv-index-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .srv-index-card {
+      display: flex; align-items: center; gap: 16px;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 4px; padding: 20px 22px;
+      text-decoration: none;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .srv-index-card:hover {
+      border-color: var(--gold); box-shadow: 0 6px 24px rgba(0,151,167,.12);
+      transform: translateY(-2px);
+    }
+    .srv-index-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 700;
+      color: var(--gold); line-height: 1; flex-shrink: 0;
+    }
+    .srv-index-card h4 { color: var(--navy); font-size: .95rem; margin: 0 0 3px; }
+    .srv-index-card span { font-size: .8rem; color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .srv-grid, .srv-grid.reverse { grid-template-columns: 1fr; direction: ltr; gap: 36px; }
+      .srv-img-wrap img { height: 300px; }
+      .stats-bar .container { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 20px; }
+      .stat-item:nth-child(2n) { border-right: none; }
+      .stat-item:last-child { border-bottom: none; }
+      .srv-index-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 580px) {
+      .srv-index-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <meta name="geo.region" content="TR-34" />
+  <meta name="geo.placename" content="Istanbul" />
+  <meta name="geo.position" content="41.0082;28.9784" />
+  <meta name="ICBM" content="41.0082, 28.9784" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#1C2B2D" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://turkuazglobalinsaat.com/hizmetlerimiz.html" />
+  <meta property="og:title" content="Hizmetlerimiz | Turkuaz Global İnşaat İstanbul — Tadilat, Boya, Alçı, Fayans" />
+  <meta property="og:description" content="İstanbul'da A'dan Z'ye inşaat ve dekorasyon: tadilat, alçı, boya, fayans, laminat, kartonpiyer, mantolama ve daha fazlası. Ücretsiz keşif: 0532 067 65 48" />
+  <meta property="og:image" content="https://turkuazglobalinsaat.com/img/WhatsApp%20Image%202026-06-27%20at%2014.23.07%20(10).jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta name="author" content="Turkuaz Global Insaat" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-name">Turkuaz Global</span><span class="logo-sub">İnşaat & Dekorasyon · İstanbul</span></a>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li class="has-dropdown">
+          <a href="hizmetlerimiz.html" class="active">Hizmetlerimiz <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <ul class="dropdown">
+            <li><a href="tadilat.html">Tadilat &amp; Renovasyon</a></li>
+            <li><a href="alci-siva.html">Alçı, Sıva &amp; Kartonpiyer</a></li>
+            <li><a href="boya-badana.html">Boya &amp; Badana</a></li>
+            <li><a href="zemin-kaplama.html">Fayans, Laminat &amp; Zemin</a></li>
+            <li><a href="dis-cephe.html">Dış Cephe &amp; Yalıtım</a></li>
+            <li><a href="dekorasyon.html">Dekorasyon &amp; İç Mimari</a></li>
+          </ul>
+        </li>
+        <li><a href="galeri.html">Projelerimiz</a></li>
+        <li><a href="sss.html">SSS</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+905320676548" class="btn btn-primary header-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Ücretsiz Keşif
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo"><span class="logo-name">Turkuaz Global</span><span class="logo-sub">İnşaat & Dekorasyon · İstanbul</span></a>
+    <button class="mobile-nav-close" id="navClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-nav-body">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <span class="mobile-nav-lbl">Hizmetlerimiz</span>
+    <div class="mobile-sub">
+      <a href="tadilat.html">Tadilat &amp; Renovasyon</a>
+      <a href="alci-siva.html">Alçı, Sıva &amp; Kartonpiyer</a>
+      <a href="boya-badana.html">Boya &amp; Badana</a>
+      <a href="zemin-kaplama.html">Fayans, Laminat &amp; Zemin</a>
+      <a href="dis-cephe.html">Dış Cephe &amp; Yalıtım</a>
+      <a href="dekorasyon.html">Dekorasyon &amp; İç Mimari</a>
+    </div>
+    <a href="galeri.html">Projelerimiz</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+  </div>
+  <div class="mobile-nav-foot">
+    <a href="tel:+905320676548" class="mob-phone">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      0532 067 65 48
+    </a>
+    <a href="https://wa.me/905320676548" target="_blank" rel="noopener" class="mob-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="srv-hero">
+  <div class="container">
+    <span class="section-label">Turkuaz Global İnşaat · İstanbul</span>
+    <h1>A'dan Z'ye İnşaat<br />ve Dekorasyon Hizmetleri</h1>
+    <p>Tadilattan alçıya, boyadan zemin kaplamasına, dış cepheden iç mimari tasarıma — tüm ihtiyaçlarınız tek çatı altında, garantili ve zamanında teslim.</p>
+    <div class="srv-hero-btns">
+      <a href="iletisim.html" class="btn btn-primary">Ücretsiz Keşif Talep Et</a>
+      <a href="galeri.html" class="btn btn-outline-d" style="color:#fff;border-color:rgba(255,255,255,.5);">Projelerimizi Gör</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stat-item">
+      <div class="stat-num">800+</div>
+      <div class="stat-lbl">Tamamlanan Proje</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12+</div>
+      <div class="stat-lbl">Yıllık Deneyim</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">%100</div>
+      <div class="stat-lbl">Müşteri Memnuniyeti</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Hizmet Kategorisi</div>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb"><div class="container"><ol><li><a href="index.html">Ana Sayfa</a></li><li>Hizmetlerimiz</li></ol></div></div>
+
+<!-- Hızlı Gezinme -->
+<section class="srv-index">
+  <div class="container">
+    <div class="text-center" style="max-width:560px;margin:0 auto 36px;">
+      <span class="section-label">Hizmet Kategorileri</span>
+      <h2>Ne Arıyorsunuz?</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="srv-index-grid">
+      <a href="#tadilat" class="srv-index-card">
+        <div class="srv-index-num">01</div>
+        <div><h4>Tadilat &amp; Renovasyon</h4><span>Daire, mutfak, banyo, ofis</span></div>
+      </a>
+      <a href="#alci" class="srv-index-card">
+        <div class="srv-index-num">02</div>
+        <div><h4>Alçı, Sıva &amp; Kartonpiyer</h4><span>Sıva, asma tavan, kartonpiyer</span></div>
+      </a>
+      <a href="#boya" class="srv-index-card">
+        <div class="srv-index-num">03</div>
+        <div><h4>Boya &amp; Badana</h4><span>İç, dış cephe, dekoratif, epoksi</span></div>
+      </a>
+      <a href="#zemin" class="srv-index-card">
+        <div class="srv-index-num">04</div>
+        <div><h4>Fayans, Laminat &amp; Zemin</h4><span>Seramik, parke, mermer, granit</span></div>
+      </a>
+      <a href="#discephe" class="srv-index-card">
+        <div class="srv-index-num">05</div>
+        <div><h4>Dış Cephe &amp; Yalıtım</h4><span>Mantolama, su yalıtımı, çatı</span></div>
+      </a>
+      <a href="#dekorasyon" class="srv-index-card">
+        <div class="srv-index-num">06</div>
+        <div><h4>Dekorasyon &amp; İç Mimari</h4><span>Tasarım, mobilya, aydınlatma</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 01 — TADİLAT ═══ -->
+<section class="srv-section" id="tadilat" style="padding-top:100px;">
+  <div class="container">
+    <div class="srv-grid">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.23.05 (3).avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.23.05 (3).jpeg" alt="Tadilat ve Renovasyon İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">01 — Tadilat &amp; Renovasyon</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">En Çok Tercih Edilen Hizmet</span>
+        <h2>Tadilat &amp; Renovasyon</h2>
+        <div class="divider"></div>
+        <p>Yaşam alanlarınız zamanla yıpranır, ihtiyaçlarınız değişir ve zevkleriniz gelişir. Komple bir daire tadilatından küçük ölçekli mutfak veya banyo yenilemesine kadar her ölçekte projede Turkuaz Global İnşaat yanınızda. İstanbul'un dört bir yanında yüzlerce projeyi başarıyla tamamladık; her birinde aynı titizliği, aynı kalite standardını ve aynı müşteri memnuniyetini koruduk.</p>
+        <p>Tadilat sürecindeki en büyük kaygı işlerin aksaması ve teslim tarihlerine uyulmamasıdır. Biz bu sorunu kökten çözüyoruz: Projeye başlamadan önce ayrıntılı bir keşif ve planlama yapıyoruz. Duvarların, zeminlerin, tavan yüksekliklerinin ve tesisat hatlarının tam analiziyle işe giriyoruz. Böylece süreçte sürpriz maliyetler veya gecikmeler yaşanmıyor.</p>
+        <p>Komple daire tadilatında duvar ve tavan yenileme, zemin döşeme, elektrik ve tesisat revizyonu, boya ve alçı işleri ekibimiz tarafından koordineli biçimde yürütülüyor. Farklı ustalar arasındaki iletişim boşluklarından doğan hatalar bizimle yaşanmıyor; tüm işleri kendi bünyemizdeki uzman ekip üstleniyor. Mutfak tadilatında dolap sökme ve yeni montaj, tezgah değişimi, fayans döşeme ve tesisat yenileme bir arada sunuluyor. Banyolarda ise su yalıtımı, seramik kaplama ve sıhhi tesisat konusunda hızlı ve temiz çalışıyoruz.</p>
+        <p>Ofis ve işyeri tadilatlarında bölme duvarlar, asma tavan uygulamaları ve aydınlatma sistemleri kurulumunda kurumsal ihtiyaçlara odaklanıyoruz. İşyerinizi kapatmadan ya da en kısa süre kapalı tutarak çalışma ortamınızı modernize etmek için hızlı teslim programları oluşturuyoruz. Her büyüklükte, her bütçede ve her tarzdaki tadilat projelerinde Turkuaz Global İnşaat güvencesiyle kaliteli ve garantili hizmet sunuyoruz.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">Komple Daire Tadilatı</span>
+          <span class="srv-tag">Mutfak Yenileme</span>
+          <span class="srv-tag">Banyo Tadilatı</span>
+          <span class="srv-tag">Ofis &amp; İşyeri</span>
+          <span class="srv-tag">Elektrik &amp; Tesisat</span>
+          <span class="srv-tag">Hızlı Teslim</span>
+        </div>
+        <a href="tadilat.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 — ALÇI SIVA ═══ -->
+<section class="srv-section bg-alt" id="alci">
+  <div class="container">
+    <div class="srv-grid reverse">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.22.56.avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.22.56.jpeg" alt="Alçı Sıva ve Kartonpiyer İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">02 — Alçı, Sıva &amp; Kartonpiyer</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">Temel &amp; Dekoratif Yüzeyler</span>
+        <h2>Alçı, Sıva &amp;<br />Kartonpiyer</h2>
+        <div class="divider"></div>
+        <p>Bir mekanın kalitesi duvarlardan ve tavanlardan başlar. Ne kadar güzel bir mobilya veya zemin seçilirse seçilsin, pürüzlü duvarlar ve dağılmış sıvalar tüm görünümü olumsuz etkiler. Bu nedenle alçı, sıva ve kartonpiyer işleri bitişteki değil başlangıçtaki en kritik adımlardan biridir.</p>
+        <p>Turkuaz Global İnşaat olarak ince alçı sıvadan kaba sıva uygulamalarına, köşe alçılarından çatlak onarımına kadar her türlü sıva işini eksiksiz yapıyoruz. Yüzeyleri önce temizliyor, zemin hazırlığını tamamlıyor ve ardından profesyonel sıva uygulaması gerçekleştiriyoruz. Sonuç: Boyaya hazır, düzgün ve uzun ömürlü yüzeyler. Kullandığımız malzemeler TS standartlarına uygun, sektörde güvenilir markalar arasından özenle seçilmektedir.</p>
+        <p>Kartonpiyer uygulamaları mekanlara şıklık katan dekoratif bir dokunuştur. Klasik ve modern tarzların her ikisine de uygun profillerimizle, tavan ile duvar köşelerini estetik çerçevelere dönüştürüyoruz. Rozet, bordür ve LED aydınlatma nişi entegrasyonuyla her zevke hitap eden çözümler üretiyoruz.</p>
+        <p>Alçıpan (drywall) asma tavan uygulamalarında hem estetik hem de fonksiyonel çözümler sunuyoruz. Spot ve LED aydınlatma nişleri, ısı ve ses yalıtımı, kademeli veya kasalı tavan tasarımları; tüm bunları tek bir elden teslim ediyoruz. Özellikle İstanbul'un yeni yapılarında tercih edilen modern alçıpan sistemleri, kurulum hızı ve uzun ömrüyle öne çıkıyor. Geniş ticari alanlarda ise çelik konstrüksiyon tavan sistemleri akustik panellerle birleştirilerek hem dayanıklı hem de estetik çözümler sunuluyor.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">İnce Alçı Sıva</span>
+          <span class="srv-tag">Kartonpiyer</span>
+          <span class="srv-tag">Asma Tavan</span>
+          <span class="srv-tag">LED Nişi</span>
+          <span class="srv-tag">Çatlak Onarımı</span>
+          <span class="srv-tag">Çelik Tavan</span>
+        </div>
+        <a href="alci-siva.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03 — BOYA BADANA ═══ -->
+<section class="srv-section" id="boya">
+  <div class="container">
+    <div class="srv-grid">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.23.06 (10).avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.23.06 (10).jpeg" alt="Boya Badana İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">03 — Boya &amp; Badana</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">İç, Dış &amp; Dekoratif Boya</span>
+        <h2>Boya &amp; Badana</h2>
+        <div class="divider"></div>
+        <p>Boya, bir mekanın kimliğini belirleyen en güçlü unsurlardan biridir. Doğru renk seçimi ve profesyonel uygulama ile sıradan bir oda şık ve ferah bir yaşam alanına dönüşebilir; soluk ve bakımsız bir bina cephesi ise neredeyse yeni inşa edilmiş bir görünüme kavuşabilir. İç mekan boyasından dış cephe uygulamalarına, dekoratif dokulardan epoksi zemin kaplamalarına uzanan geniş bir yelpazede profesyonel hizmetler sunuyoruz.</p>
+        <p>İç mekanlarda su bazlı, sağlıklı ve yıkanabilir boya seçenekleriyle çalışıyoruz. Renk danışmanlığımız sayesinde mekanınıza en uygun paleti birlikte belirliyoruz. Boya öncesinde astar uygulayarak kaplama kalitesini artırıyor, pürüzleri ve çatlakları onararak pürüzsüz yüzeyler elde ediyoruz. Hızlı kuruyan formüllerimiz sayesinde evinizi ya da işyerinizi çabuk normale döndürüyoruz.</p>
+        <p>Dış cephe boyası uygulamalarında UV dirençli, yağmur ve don koşullarına dayanıklı silikon ve elastomerik boyalar tercih ediyoruz. İstanbul'un değişken iklimine uygun bu malzemeler, uzun yıllar boyunca renk ve doku kaybı yaşamadan koruma sağlar. Ekibimiz yükseklik çalışmalarında tam donanımlı iskele sistemleri kullanarak güvenli ve kalıcı sonuçlar elde ediyor.</p>
+        <p>Dekoratif ve doku boyalarla ise mekanlara benzersiz bir atmosfer katıyoruz. Kum ve taş doku efektleri, İtalyan sıva, Marsilya uygulamaları, metalik yüzeyler ve şablon boya teknikleriyle standart duvarları sanat eserine dönüştürüyoruz. Garaj, depo, mutfak ve ticari alanlar için sunduğumuz epoksi zemin boya hizmetiyle ise dayanıklı, hijyenik ve uzun ömürlü zeminler elde ediyorsunuz. İş güvenliği standartlarına uygun kayma önleyici seçenekler de mevcuttur.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">İç Mekan Boyası</span>
+          <span class="srv-tag">Dış Cephe Boyası</span>
+          <span class="srv-tag">Dekoratif Doku</span>
+          <span class="srv-tag">İtalyan Sıva</span>
+          <span class="srv-tag">Epoksi Zemin</span>
+          <span class="srv-tag">Renk Danışmanlığı</span>
+        </div>
+        <a href="boya-badana.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 — ZEMİN KAPLAMA ═══ -->
+<section class="srv-section bg-alt" id="zemin">
+  <div class="container">
+    <div class="srv-grid reverse">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.23.06 (13).avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.23.06 (13).jpeg" alt="Fayans Laminat Zemin Kaplama İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">04 — Fayans, Laminat &amp; Zemin</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">Seramik · Parke · Mermer · Granit</span>
+        <h2>Fayans, Laminat &amp;<br />Zemin Kaplama</h2>
+        <div class="divider"></div>
+        <p>Zemin, bir mekanın en çok kullanılan ve en fazla yıpranan yüzeyidir. Hem estetik hem de dayanıklılık açısından doğru seçim ve profesyonel uygulama, yatırımınızın uzun yıllar değerini korumasını sağlar. Fayans, seramik, laminat, parke, mermer ve granit gibi farklı zemin kaplama seçeneklerinde kapsamlı hizmetler sunuyoruz.</p>
+        <p>Fayans ve seramik uygulamalarında banyo, mutfak ve ortak alanlara özel çözümler geliştiriyoruz. Büyük format seramik plakalar, karo mozaikler, klasik fayans döşemeler; derz rengi, dizim şekli ve yön seçenekleriyle kişiye özel estetik çözümler sunuluyor. Her uygulamada zemin tesviyesi ve su yalıtımı öncelikli adım olarak gerçekleştiriliyor; böylece uzun yıllar sorunsuz kullanım garanti altına alınıyor.</p>
+        <p>Laminat parke uygulamalarında AC4 ve AC5 dayanım sınıfı seçeneklerle hem ev hem de ticari kullanım için uygun çözümler sunuyoruz. Ses yalıtımlı altlık sistemleri ve süpürgelik montajıyla tamamlanan döşeme; sıcak, şık ve bakımı kolay bir zemin estetiği yaratıyor. Masif ve yarı masif ahşap parke seçenekleriyle doğal ve lüks bir hava elde etmek isteyenler için de geniş bir ürün yelpazesi mevcut.</p>
+        <p>Mermer ve granit zemin kaplamada ise doğal taşın eşsiz güzelliği mekanlara taşınıyor. Giriş holleri, salonlar, merdiven basamakları ve teras gibi prestijli alanlarda tercih edilen bu malzemeler, cilalama ve düzenli bakım hizmetlerimizle uzun yıllar ilk gün parlaklığını koruyor. Duvar kaplama uygulamalarımızda ise doğal taş, ahşap, PVC panel ve 3D duvar kaplamaları arasından tercihinize göre en uygun çözümü uyguluyoruz.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">Fayans &amp; Seramik</span>
+          <span class="srv-tag">Laminat Parke</span>
+          <span class="srv-tag">Masif Parke</span>
+          <span class="srv-tag">Mermer &amp; Granit</span>
+          <span class="srv-tag">Duvar Kaplama</span>
+          <span class="srv-tag">Zemin Tesviyesi</span>
+        </div>
+        <a href="zemin-kaplama.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 05 — DIŞ CEPHE ═══ -->
+<section class="srv-section" id="discephe">
+  <div class="container">
+    <div class="srv-grid">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.23.06 (1).avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.23.06 (1).jpeg" alt="Dış Cephe Yalıtım İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">05 — Dış Cephe &amp; Yalıtım</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">Mantolama · Su Yalıtımı · Çatı</span>
+        <h2>Dış Cephe &amp;<br />Yalıtım</h2>
+        <div class="divider"></div>
+        <p>Binanızın dış cephesi hem estetik kimliğini hem de enerji verimliliğini doğrudan etkiler. Yıllar içinde güneş, yağmur ve ısı değişimlerine maruz kalan cepheler çatlar, bozulur ve ısı kayıplarına yol açar. Mantolama, su yalıtımı, çatı onarımı ve dış cephe boyası alanlarında kapsamlı hizmetler sunarak binanızın değerini ve konforunu artırıyoruz.</p>
+        <p>Mantolama (ısı yalıtımı), İstanbul'daki binaların en çok ihtiyaç duyduğu yatırımların başında geliyor. EPS (strafor) ve taş yünü sistemleriyle yapılan uygulamalar, kış aylarında ısı kaybını yüzde yetmişin üzerinde azaltıyor; yaz aylarında ise binanın serinliğini korumasına yardımcı oluyor. Bu sayede enerji faturalarınızda ciddi tasarruf elde ediyorsunuz. TS EN ISO belgeli malzemeler ve deneyimli uygulama ekibimizle onlarca yıl dayanıklılık garantisi sunuyoruz.</p>
+        <p>Su yalıtımı uygulamalarında teras, çatı, balkon, banyo ve bodrum katları için özelleştirilmiş çözümler sunuyoruz. Poliüretan, bitüm esaslı ve kristalize membran sistemlerle her yüzey tipine uygun sızdırmazlık sağlıyoruz. Nem ve su sızıntısı sorunları mekanın içinde görünür hale gelmeden, çok daha büyük hasarlara yol açmadan müdahale etmek, uzun vadede büyük maliyetlerden kaçınmanızı sağlar.</p>
+        <p>Çatı onarım ve yenileme çalışmalarımızda kiremit değişiminden membran uygulamasına, çatı arası yalıtımından oluk ve drenaj sistemi revizyonuna kadar kapsamlı bir hizmet paketi sunulur. Özellikle İstanbul'un yoğun yağışlı dönemlerinde zamanında yapılan çatı bakımı, sonraki yıllarda oluşabilecek ciddi hasarları önler. Dış cephe boyası ve sıva uygulamalarında ise uzun ömürlü ve estetik sonuçlar için doğru malzeme seçimi ve titiz hazırlık aşaması önceliğimizdir.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">EPS Mantolama</span>
+          <span class="srv-tag">Taş Yünü</span>
+          <span class="srv-tag">Su Yalıtımı</span>
+          <span class="srv-tag">Çatı Onarımı</span>
+          <span class="srv-tag">Membran</span>
+          <span class="srv-tag">Cephe Boyası</span>
+        </div>
+        <a href="dis-cephe.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 06 — DEKORASYON ═══ -->
+<section class="srv-section bg-alt" id="dekorasyon">
+  <div class="container">
+    <div class="srv-grid reverse">
+      <div class="srv-img-wrap">
+        <picture><source srcset="img/WhatsApp Image 2026-06-27 at 14.23.07 (10).avif" type="image/avif" /><img src="img/WhatsApp Image 2026-06-27 at 14.23.07 (10).jpeg" alt="Dekorasyon İç Mimari İstanbul" loading="lazy" /></picture>
+        <div class="srv-img-badge">06 — Dekorasyon &amp; İç Mimari</div>
+      </div>
+      <div class="srv-content">
+        <span class="section-label">Tasarım · Mobilya · Aydınlatma</span>
+        <h2>Dekorasyon &amp;<br />İç Mimari</h2>
+        <div class="divider"></div>
+        <p>Bir mekan, doğru dekorasyon ve iç mimari tasarımla tamamen farklı bir kimlik kazanabilir. Hayatınızın büyük bir bölümünü geçirdiğiniz yaşam alanlarınızın size ilham vermesi, sizi rahatlatması ve kişiliğinizi yansıtması gerekir. İç mekan tasarımından mobilya seçimine, aydınlatma planlamasından dekoratif panel uygulamalarına kadar kapsamlı dekorasyon hizmetleri sunuyoruz.</p>
+        <p>İç mekan tasarım sürecinde önce mekanınızı yerinde inceleyerek ihtiyaçlarınızı ve beklentilerinizi dinliyoruz. Ardından mekân analizi ve yerleşim planı hazırlıyor, renk ve malzeme seçimi konusunda danışmanlık veriyoruz. Gerektiğinde 3D görselleştirme ile proje hayata geçmeden önce nasıl görüneceğini net biçimde sunuyoruz. Bu aşama, sonradan yaşanacak pişmanlıkları önlediği için son derece değerlidir.</p>
+        <p>Mutfak dolabı ve vestiyer uygulamalarında ölçüye özel üretim anlayışıyla çalışıyoruz. Her mutfak, her giyinme odası ve her banyo birbirinden farklı boyutlara sahiptir. Bu nedenle standart çözümler yerine, mekanınızın her santimetresini en verimli şekilde kullanan dolap sistemleri tasarlıyor ve uyguluyoruz. Gövde malzeme seçiminden kapak rengine, iç aksesuar sistemlerinden kol ve menteşe tercihlerine kadar her detay müşterimizle birlikte belirleniyor.</p>
+        <p>Aydınlatma tasarımı, dekorasyonun en güçlü ama en çok ihmal edilen unsurudur. Doğru yerleştirilen bir spot ışık veya stratejik konumlandırılmış dolaylı aydınlatma, mekanın algılanan boyutunu değiştirebilir, atmosferi dramatik biçimde dönüştürebilir. LED planlama, sarkıt seçimi ve akıllı aydınlatma sistemleri entegrasyonuyla mekanınıza karakter katıyoruz. Dekoratif panel ve aksesuar uygulamalarıyla tüm bu unsurları bir araya getirdiğimizde; sahibinin kişiliğini yansıtan, işlevsel ve estetik açıdan mükemmel bir yaşam alanı ortaya çıkıyor.</p>
+        <div class="srv-tags">
+          <span class="srv-tag">İç Mekan Tasarımı</span>
+          <span class="srv-tag">3D Görselleştirme</span>
+          <span class="srv-tag">Mutfak Dolabı</span>
+          <span class="srv-tag">Vestiyer</span>
+          <span class="srv-tag">LED Aydınlatma</span>
+          <span class="srv-tag">Dekoratif Panel</span>
+        </div>
+        <a href="dekorasyon.html" class="srv-link">Detaylı Bilgi &amp; Fiyat →</a>
+        <a href="iletisim.html" class="srv-link-ghost">Ücretsiz Keşif →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Hangi Hizmet Olursa Olsun</h2>
+    <p>Ücretsiz keşif ile projenizi değerlendirelim, size özel teklif suналım.</p>
+    <div class="cta-actions">
+      <a href="iletisim.html" class="btn btn-primary">Ücretsiz Keşif Talep Et</a>
+      <a href="https://wa.me/905320676548?text=Merhaba,%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp ile Bilgi Al
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a href="index.html" class="logo"><span class="logo-name">Turkuaz Global</span><span class="logo-sub">İnşaat & Dekorasyon</span></a><p class="footer-desc">İstanbul genelinde tadilat, alçı, boya, fayans ve dekorasyon alanında profesyonel hizmet.</p></div>
+      <div><h4>Hizmetlerimiz</h4><ul><li><a href="tadilat.html">Tadilat &amp; Renovasyon</a></li><li><a href="alci-siva.html">Alçı, Sıva &amp; Kartonpiyer</a></li><li><a href="boya-badana.html">Boya &amp; Badana</a></li><li><a href="zemin-kaplama.html">Fayans, Laminat &amp; Zemin</a></li><li><a href="dis-cephe.html">Dış Cephe &amp; Yalıtım</a></li><li><a href="dekorasyon.html">Dekorasyon &amp; İç Mimari</a></li></ul></div>
+      <div><h4>Kurumsal</h4><ul><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="galeri.html">Projelerimiz</a></li><li><a href="sss.html">SSS</a></li><li><a href="iletisim.html">İletişim</a></li></ul></div>
+      <div><h4>İletişim</h4><a href="tel:+905320676548" class="footer-phone"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>0532 067 65 48</a><ul><li><a href="https://wa.me/905320676548" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Turkuaz Global İnşaat. Tüm hakları saklıdır.</span><div class="footer-legal"><a href="gizlilik-politikasi.html">Gizlilik Politikası</a><a href="kullanim-sartlari.html">Kullanım Şartları</a></div><span>İstanbul</span></div>
+  </div>
+</footer>
+
+<script>
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobileNav');
+  const cls = document.getElementById('navClose');
+  ham.addEventListener('click', () => { mob.classList.add('open'); document.body.style.overflow='hidden'; });
+  cls.addEventListener('click', () => { mob.classList.remove('open'); document.body.style.overflow=''; });
+</script>
+
+<div class="mob-cta-bar">
+  <a href="tel:+905320676548" class="mob-cta-call">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    Telefon Et
+  </a>
+  <a href="https://wa.me/905320676548" target="_blank" rel="noopener" class="mob-cta-wa">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+</body>
+</html>

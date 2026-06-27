@@ -1,19 +1,19 @@
 ﻿/* ════════════════════════════════════════════
-   Emir Tente — Global Stylesheet
+   Turkuaz Global İnşaat — Global Stylesheet
    ════════════════════════════════════════════ */
 
 /* ── Variables ─────────────────────────────── */
 :root {
-  --navy:       #000000;
-  --navy-mid:   #1a1a1a;
-  --gold:       #b07d38;
-  --gold-lt:    #c99550;
-  --cream:      #f8f5ef;
+  --navy:       #1C2B2D;
+  --navy-mid:   #243B3E;
+  --gold:       #0097A7;
+  --gold-lt:    #00BCD4;
+  --cream:      #F0FAFA;
   --white:      #ffffff;
-  --gray:       #f2f0ec;
-  --text:       #1b1b1b;
-  --muted:      #627088;
-  --border:     #e0dbd2;
+  --gray:       #E3F4F5;
+  --text:       #1C2B2D;
+  --muted:      #4A6B70;
+  --border:     #B2D8DC;
   --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
   --shadow:     0 4px 18px rgba(0,0,0,.09);
   --shadow-lg:  0 10px 40px rgba(0,0,0,.13);
@@ -506,7 +506,7 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 
 @keyframes pulse-glow {
   0%, 100% { transform: scale(1);    text-shadow: none; }
-  50%       { transform: scale(1.12); text-shadow: 0 0 18px rgba(176,125,56,.7), 0 0 36px rgba(176,125,56,.3); }
+  50%       { transform: scale(1.12); text-shadow: 0 0 18px rgba(0,151,167,.7), 0 0 36px rgba(0,151,167,.3); }
 }
 .stat-pulse {
   display: inline-block;
@@ -855,13 +855,11 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 /* ── Product feature list ────────────────────── */
 .product-feature-list { margin: 20px 0 0; }
 .product-feature-list li {
-  display: flex; gap: 12px; align-items: flex-start;
   font-size: .9rem; color: var(--muted);
-  padding: 8px 0; border-bottom: 1px solid var(--border);
+  padding: 5px 0;
 }
-.product-feature-list li:last-child { border-bottom: none; }
 .product-feature-list li::before {
-  content: '—'; color: var(--gold); font-weight: 700; flex-shrink: 0;
+  content: '✓ '; color: var(--gold); font-weight: 700;
 }
 
 /* ── Product Detail — Spec Strip ────────────── */
@@ -1113,7 +1111,7 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 }
 .mob-cta-call:hover { filter: brightness(.88); }
 .mob-cta-wa:hover   { filter: brightness(.88); }
-.mob-cta-call { background: var(--navy); }
+.mob-cta-call { background: var(--gold); }
 .mob-cta-wa   { background: #25d366; }
 .mob-cta-call svg,
 .mob-cta-wa   svg { width: 19px; height: 19px; fill: var(--white); flex-shrink: 0; }

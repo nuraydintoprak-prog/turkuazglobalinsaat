@@ -1,0 +1,5 @@
+# ads.txt — Turkuaz Global İnşaat
+# https://turkuazglobalinsaat.com
+# Bu site reklam yayınlamamaktadır (advertiser only).
+# Google Ads doğrulama için bu dosya mevcuttur.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
