@@ -1068,6 +1068,9 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 @media (max-width: 768px) {
   .nav,.header-cta    { display: none; }
   .hamburger          { display: flex; }
+  :root               { --header-h: 64px; }
+  .logo-img           { max-height: 46px; max-width: 120px; }
+  .header-inner > .logo { height: 100%; display: flex; align-items: center; }
   .topbar-left span:not(.topbar-addr) { display: none; }
   .services-grid      { grid-template-columns: 1fr; }
   .preview-grid       { grid-template-columns: 1fr; }
