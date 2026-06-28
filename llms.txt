@@ -1,30 +1,24 @@
-# Turkuaz Global İnşaat — llms.txt
-# https://turkuazglobalinsaat.com
+# Turkuaz Global İnşaat
 
-## Şirket
-Turkuaz Global İnşaat, İstanbul genelinde faaliyet gösteren profesyonel tadilat, inşaat ve dekorasyon firmasıdır.
-10 yılı aşkın deneyim, 800+ tamamlanan proje, garantili işçilik.
-İletişim: 0532 067 65 48
-Hizmet Bölgesi: İstanbul (Anadolu ve Avrupa Yakası)
+> İstanbul genelinde faaliyet gösteren profesyonel tadilat, inşaat ve dekorasyon firması. 2007'den bu yana 800+ tamamlanan proje, garantili işçilik, ücretsiz keşif hizmeti.
+
+Telefon: 0532 067 65 48
+Hizmet Bölgesi: İstanbul — Anadolu ve Avrupa Yakası tüm ilçeler
 
 ## Hizmetler
-- Tadilat & Renovasyon: Komple daire, mutfak, banyo ve ofis tadilatı
-- Alçı, Sıva & Kartonpiyer: Alçıpan asma tavan, bölme duvar, kartonpiyer profil
-- Boya & Badana: İç cephe boyası, dış cephe boyası, dekoratif boyalar
-- Fayans, Laminat & Zemin: Seramik, granit, laminat parke, SPC zemin
-- Dış Cephe & Yalıtım: Mantolama, dış cephe boyası, ısı-ses yalıtımı
-- Dekorasyon & İç Mimari: Konsept tasarım, mobilya seçimi, aydınlatma
 
-## Sayfalar
-- Ana Sayfa: https://turkuazglobalinsaat.com/
-- Hakkımızda: https://turkuazglobalinsaat.com/hakkimizda.html
-- Hizmetlerimiz: https://turkuazglobalinsaat.com/hizmetlerimiz.html
-- Tadilat: https://turkuazglobalinsaat.com/tadilat.html
-- Alçı & Sıva: https://turkuazglobalinsaat.com/alci-siva.html
-- Boya & Badana: https://turkuazglobalinsaat.com/boya-badana.html
-- Zemin Kaplama: https://turkuazglobalinsaat.com/zemin-kaplama.html
-- Dış Cephe: https://turkuazglobalinsaat.com/dis-cephe.html
-- Dekorasyon: https://turkuazglobalinsaat.com/dekorasyon.html
-- Projelerimiz: https://turkuazglobalinsaat.com/galeri.html
-- SSS: https://turkuazglobalinsaat.com/sss.html
-- İletişim: https://turkuazglobalinsaat.com/iletisim.html
+- [Tadilat & Renovasyon](https://turkuazglobalinsaat.com/tadilat.html): Komple daire, mutfak, banyo ve ofis tadilatı; kaba ve ince işçilik
+- [Alçı, Sıva & Kartonpiyer](https://turkuazglobalinsaat.com/alci-siva.html): İnce alçı sıva, alçıpan asma tavan, kartonpiyer ve dekoratif alçı
+- [Boya & Badana](https://turkuazglobalinsaat.com/boya-badana.html): İç cephe, dış cephe ve dekoratif boya; silikonlu ve antibakteryel ürünler
+- [Fayans, Laminat & Zemin](https://turkuazglobalinsaat.com/zemin-kaplama.html): Seramik, granit, laminat parke, SPC zemin ve doğal taş kaplama
+- [Dış Cephe & Yalıtım](https://turkuazglobalinsaat.com/dis-cephe.html): ETICS mantolama, dış cephe boyası, ısı ve ses yalıtımı, teras su yalıtımı
+- [Dekorasyon & İç Mimari](https://turkuazglobalinsaat.com/dekorasyon.html): Konsept tasarım, aydınlatma planlaması, dekoratif kaplama ve mobilya koordinasyonu
+
+## Kurumsal
+
+- [Ana Sayfa](https://turkuazglobalinsaat.com/): Firma tanıtımı, öne çıkan hizmetler ve iletişim
+- [Hakkımızda](https://turkuazglobalinsaat.com/hakkimizda.html): Tarihçe, ekip ve çalışma felsefesi
+- [Hizmetlerimiz](https://turkuazglobalinsaat.com/hizmetlerimiz.html): Tüm hizmetlerin genel bakışı
+- [Projelerimiz](https://turkuazglobalinsaat.com/galeri.html): Tamamlanan projelerin fotoğraf galerisi
+- [SSS](https://turkuazglobalinsaat.com/sss.html): Sık sorulan sorular ve yanıtları
+- [İletişim](https://turkuazglobalinsaat.com/iletisim.html): İletişim bilgileri ve ücretsiz keşif talebi formu
