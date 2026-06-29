@@ -42,8 +42,9 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 
 /* ── Layout ─────────────────────────────────── */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
-.section   { padding: 90px 0; }
-.section-sm{ padding: 60px 0; }
+.section        { padding: 90px 0; }
+.section-sm     { padding: 60px 0; }
+.section-padding{ padding: 60px 0; }
 .section-label {
   display: inline-block;
   font-size: .7rem; font-weight: 700;
