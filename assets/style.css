@@ -1116,3 +1116,8 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 .mob-cta-wa   { background: #25d366; }
 .mob-cta-call svg,
 .mob-cta-wa   svg { width: 19px; height: 19px; fill: var(--white); flex-shrink: 0; }
+/* ── 4-photo grid ─────────────────────────────── */
+.photo-grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:48px 0; }
+.photo-grid-4 picture { display:block; }
+.photo-grid-4 img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px; display:block; }
+@media(max-width:768px){ .photo-grid-4{ grid-template-columns:repeat(2,1fr); } }
