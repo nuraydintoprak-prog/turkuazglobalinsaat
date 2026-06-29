@@ -1121,3 +1121,9 @@ p  { font-size: .95rem; color: var(--muted); line-height: 1.75; }
 .photo-grid-4 picture { display:block; }
 .photo-grid-4 img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px; display:block; }
 @media(max-width:768px){ .photo-grid-4{ grid-template-columns:repeat(2,1fr); } }
+
+/* ── Hizmet Bolgeleri ─────────────────────────────── */
+.hizmet-bolgeleri { padding:48px 0 40px; background:var(--bg-alt,#f8f7f4); }
+.bolge-list { list-style:none; padding:0; margin:0; }
+.bolge-list li { font-size:.8rem; color:#555; padding:4px 0; border-bottom:1px solid #e8e5e0; line-height:1.5; }
+@media(max-width:640px){ .hizmet-bolgeleri [style*="grid-template-columns:1fr 1fr"]{ grid-template-columns:1fr !important; } }
